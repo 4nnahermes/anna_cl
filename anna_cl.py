@@ -1,26 +1,24 @@
-lalunos = []
-lmatricula = []
-ldata = []
+list_students = []
+list_registration = []
+list_birth_date = []
 
 while True:
-    esc = input("""
+    choice = input("""
 MENU
 =====================
 1 - Adicionar aluno
 2 - Listar todos alunos
 Escolha: """)
 
-# entrada de dados
-    if esc == "1":
-        nome = input("Nome: ")
-        lalunos.append(nome)
-        matricula = input("Matrícula: ")
-        lmatricula.append(matricula)
-        data = input("Nascimento: ")
-        ldata.append(data)
-        print(f'\n1{nome} - {matricula} - {data}')
+    if choice == "1":
+        name = input("Nome: ")
+        list_students.append(name)
+        registration = input("Matrícula: ")
+        list_registration.append(registration)
+        birth_date = input("Nascimento: ")
+        list_birth_date.append(birth_date)
+        print(f'\n1{name} - {registration} - {birth_date}')
 
-# print da lista de alunos cadastrados
-    if esc == "2":
-        for cont in range (len(lalunos)):
-            print(f'{cont+1}. {lalunos[cont]} - {lmatricula[cont]} - {ldata[cont]}')
+    if choice == "2":
+        for student in range (len(list_students)):
+            print(f'{student+1}. {list_students[student]} - {list_registration[student]} - {list_birth_date[student]}')
